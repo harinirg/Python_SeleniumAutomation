@@ -44,7 +44,7 @@ else:
 new_name=driver.find_element(By.XPATH,value="//input[@name='name']")
 new_name.send_keys("harini")
 new_email=driver.find_element(By.XPATH,value="(//input[@name='email'])[2]")
-new_email.send_keys("harinigr2630@gmail.com")
+new_email.send_keys("rgharini30@gmail.com")
 driver.find_element(By.XPATH,value="//button[text()='Signup']").click()
 driver.find_element(By.XPATH,value="//input[@id='id_gender2']").click()
 driver.find_element(By.ID,value="password").send_keys("Harni61@26")
