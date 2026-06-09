@@ -13,7 +13,7 @@ if(driver.title=="Dashboard"):
 else:
     print("Unsuccessful")
 wait=WebDriverWait(driver,15)
-wait.until(EC.element_to_be_clickable((By.XPATH,"//span[text()='Element']/parent::a"))).click()
+wait.until(EC.element_to_be_clickable((By.XPATH,"(//a[@href='#'])[6]"))).click()
 wait.until(EC.element_to_be_clickable((By.XPATH,"//li[@id='menuform:m_dropdown']/child::a"))).click()
 expected_url = "https://www.leafground.com/select.xhtml"
 if expected_url in driver.current_url:
@@ -23,7 +23,6 @@ else:
 select_tool=driver.find_element(By.XPATH,"//select[@class='ui-selectonemenu']")
 drop_down1=Select(select_tool)
 tool1=drop_down1.select_by_visible_text("Playwright")
-
 print("Playwright is selected")
 tool2=drop_down1.select_by_index(3)
 print("Puppeteer is selected")
