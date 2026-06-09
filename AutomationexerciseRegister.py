@@ -44,7 +44,7 @@ else:
 new_name=driver.find_element(By.XPATH,value="//input[@name='name']")
 new_name.send_keys("harini")
 new_email=driver.find_element(By.XPATH,value="(//input[@name='email'])[2]")
-new_email.send_keys("rgharini30@gmail.com")
+new_email.send_keys("rgharini3@gmail.com")
 driver.find_element(By.XPATH,value="//button[text()='Signup']").click()
 driver.find_element(By.XPATH,value="//input[@id='id_gender2']").click()
 driver.find_element(By.ID,value="password").send_keys("Harni61@26")
@@ -73,16 +73,6 @@ else:
     print("Failed")
 wait.until(EC.element_to_be_clickable((By.XPATH, "//a[@href='/delete_account']"))).click()
 dismiss_ads(driver)
-
-continue_btn = wait.until(
-    EC.element_to_be_clickable(
-        (By.XPATH, "//a[@data-qa='continue-button']")
-    )
-)
-
-driver.execute_script(
-    "arguments[0].scrollIntoView(true);",
-    continue_btn
-)
-
+continue_btn = wait.until(EC.element_to_be_clickable((By.XPATH, "//a[@data-qa='continue-button']")))
+driver.execute_script( "arguments[0].scrollIntoView(true);",continue_btn)
 continue_btn.click()
